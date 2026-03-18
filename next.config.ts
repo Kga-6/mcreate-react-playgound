@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizePackageImports: ['@kgalexander/mcreate-react'],
   },
-  outputFileTracingRoot: path.join(__dirname, "../"),
+  // outputFileTracingRoot: path.join(__dirname, "../"),
   serverExternalPackages: ['mjml', 'mjml-core', 'mjml-validator', 'uglify-js'],
 };
 
