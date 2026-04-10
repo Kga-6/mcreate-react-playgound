@@ -3,9 +3,10 @@
 import { Suspense, use } from 'react';
 
 import { Editor } from "@kgalexander/mcreate-react";
+import { ImageData, mockImagesData } from '@/data/fake/images';
 
-function Template({ id }: { id: string }) {
-  return ( <Editor templateId={id} /> )
+function Template({ id, initialImages }: { id: string, initialImages: ImageData[] }) {
+  return ( <Editor templateId={id} images={initialImages} /> )
 }
 
 export default function ({ params }: { params: Promise<{ id: string }> }) {
@@ -18,7 +19,7 @@ export default function ({ params }: { params: Promise<{ id: string }> }) {
         <p className="text-sm text-muted-foreground">Loading editor...</p>
       </div>
     }>
-      <Template id={id} />
+      <Template id={id} initialImages={mockImagesData} />
     </Suspense>
   );
 }

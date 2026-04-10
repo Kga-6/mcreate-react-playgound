@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@kgalexander/mcreate-react": "^1.0.9",
+    "@kgalexander/mcreate-react": "^1.0.10",
     "@radix-ui/react-tooltip": "^1.2.8",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
