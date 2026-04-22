@@ -4,9 +4,15 @@ import { Suspense, use } from 'react';
 
 import { Editor } from "@kgalexander/mcreate-react";
 import { ImageData, mockImagesData } from '@/data/fake/images';
+import { continueConversation } from '@/app/actions/ai';
 
 function Template({ id, initialImages }: { id: string, initialImages: ImageData[] }) {
-  return ( <Editor templateId={id} images={initialImages} /> )
+  return ( <Editor 
+    templateId={id} 
+    images={initialImages} 
+    generativeStream={continueConversation} 
+    /> 
+  )
 }
 
 export default function ({ params }: { params: Promise<{ id: string }> }) {
